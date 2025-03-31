@@ -8,9 +8,7 @@ interface Props {
 function GameHeading({ gameQuery }: Props) {
   return (
     <Heading textStyle="4xl" mt={4}>
-      {(gameQuery.genre?.name || "") +
-        (gameQuery.platform?.name || "") +
-        " Games"}
+      {`${gameQuery.genre?.name || ""} ${gameQuery.platform?.name || ""} Games`}
     </Heading>
   );
 }
