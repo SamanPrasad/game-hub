@@ -47,7 +47,7 @@ function App() {
           area="nav"
           position="sticky"
           top="0"
-          bg="black"
+          bg={{ _light: "white", _dark: "black" }}
           zIndex={1000}
           py={3}
         >
