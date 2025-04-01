@@ -43,14 +43,7 @@ function App() {
         px={5}
         py={2}
       >
-        <GridItem
-          area="nav"
-          position="sticky"
-          top="0"
-          bg={{ _light: "white", _dark: "black" }}
-          zIndex={1000}
-          py={3}
-        >
+        <GridItem area="nav" py={3} height={{ base: "120px", md: "60px" }}>
           <SearchContext.Provider
             value={(searchText: string) =>
               setGameQuery({ ...gameQuery, searchText })
