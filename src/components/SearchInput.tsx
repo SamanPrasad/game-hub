@@ -1,18 +1,17 @@
 import { Input, InputGroup } from "@chakra-ui/react";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import { LuSearch } from "react-icons/lu";
+import { SearchContext } from "../contexts/searchContext";
 
-interface Props {
-  onSearch: (search: string) => void;
-}
-
-function SearchInput({ onSearch }: Props) {
+function SearchInput() {
   const inputRef = useRef<HTMLInputElement>(null);
+  const onSearch = useContext(SearchContext);
+
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        if (inputRef.current) onSearch(inputRef.current?.value);
+        if (inputRef.current && onSearch) onSearch(inputRef.current?.value);
       }}
     >
       <InputGroup startElement={<LuSearch />}>
