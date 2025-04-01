@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 function Navbar() {
   const src = useColorModeValue(logo, whiteLogo);
-  const [isSticky, setIsSticky] = useState(false);
+  const [isSticky, setIsSticky] = useState(true);
   const gridHeight = { base: "120px", md: "60px" };
 
   useEffect(() => {
