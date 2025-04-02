@@ -15,7 +15,12 @@ function SearchInput() {
       }}
     >
       <InputGroup startElement={<LuSearch />}>
-        <Input ref={inputRef} placeholder="Search games..." borderRadius={20} />
+        <Input
+          ref={inputRef}
+          placeholder="Search games..."
+          borderRadius={20}
+          boxShadow="0 4px 8px 0 rgba(87, 87, 87, 0.2)"
+        />
       </InputGroup>
     </form>
   );

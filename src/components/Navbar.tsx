@@ -1,13 +1,13 @@
 import { Grid, GridItem, Image } from "@chakra-ui/react";
-import logo from "../assets/logo.png";
-import whiteLogo from "../assets/white-logo.png";
+import logoDark from "../assets/logo-dark.svg";
+import logoLight from "../assets/logo-light.svg";
 import { useColorModeValue } from "./ui/color-mode";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 import { useEffect, useState } from "react";
 
 function Navbar() {
-  const src = useColorModeValue(logo, whiteLogo);
+  const src = useColorModeValue(logoLight, logoDark);
   const [isSticky, setIsSticky] = useState(true);
   const gridHeight = { base: "120px", md: "60px" };
 
@@ -16,10 +16,10 @@ function Navbar() {
     const controller = new AbortController();
 
     const handleScroll = () => {
-      if (window.scrollY < lastScrollY) {
-        setIsSticky(true);
-      } else {
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
         setIsSticky(false);
+      } else {
+        setIsSticky(true);
       }
       lastScrollY = window.scrollY;
     };
@@ -46,7 +46,7 @@ function Navbar() {
       top={
         isSticky ? 0 : { base: `-${gridHeight.base}`, md: `-${gridHeight.md}` }
       }
-      transition="top 0.3s ease-in-out"
+      transition="0.3s ease-in-out"
       zIndex={1000}
       bg={{ _light: "white", _dark: "black" }}
       height={gridHeight}
