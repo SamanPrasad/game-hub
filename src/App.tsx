@@ -50,6 +50,13 @@ function App() {
             }
           >
             <Navbar />
+            <button
+              onClick={() => {
+                throw new Error();
+              }}
+            >
+              click me
+            </button>
           </SearchContext.Provider>
         </GridItem>
         <GridItem area="main" p={{ base: "10px", lg: 0 }} px={2}>
