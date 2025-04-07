@@ -57,6 +57,7 @@ function App() {
             >
               click me
             </button>
+            <button>Cick ME Again</button>
           </SearchContext.Provider>
         </GridItem>
         <GridItem area="main" p={{ base: "10px", lg: 0 }} px={2}>
