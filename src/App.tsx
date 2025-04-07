@@ -53,13 +53,6 @@ function App() {
           </SearchContext.Provider>
         </GridItem>
         <GridItem area="main" p={{ base: "10px", lg: 0 }} px={2}>
-          <button
-            onClick={() => {
-              throw new Error();
-            }}
-          >
-            click me
-          </button>
           <GameHeading gameQuery={gameQuery} />
           <HStack my={5}>
             <PlatformSelector
