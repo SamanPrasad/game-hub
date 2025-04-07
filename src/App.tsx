@@ -50,13 +50,7 @@ function App() {
             }
           >
             <Navbar />
-            <button
-              onClick={() => {
-                throw new Error();
-              }}
-            >
-              click me
-            </button>
+
             <button>Cick ME Again</button>
           </SearchContext.Provider>
         </GridItem>
